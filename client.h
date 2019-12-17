@@ -1,3 +1,6 @@
+#ifndef DEF_CLIENT
+#define DEF_CLIENT
+
 #include <string>
 #include <vector>
 #include "magasin.h"
@@ -31,3 +34,4 @@ class Client{
 
  	
  }; 
+#endif
