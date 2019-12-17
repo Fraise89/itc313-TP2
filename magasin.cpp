@@ -3,7 +3,7 @@
 Magasin::Magasin(vector<Product*> products, vector<Client*> clients, vector<Order*> m_orders){
 	m_products = products;
 	m_clients = clients;
-	m_orders = orders
+	m_orders = orders;
 }
 
 vector<Product*> Magasin::getProducts(){
