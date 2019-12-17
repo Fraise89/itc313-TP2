@@ -26,7 +26,40 @@ void Magasin::setClients(vector<Client*> clients){
 void Magasin::setOrders(vector<Order*> orders){
         m_orders = orders;
 }
+//question 3a
+void Magasin::addProduct(Product* products){
+	m_products.push_back(products);
+}
+//question 3b
+void Magasin::printAllProduct(){
+	vector<Product*>::iterator it;
+	int i;
+	for(it = m_products.beginn(); it!=m_products.end();it++){
+		cout<<"     "<<m_products[i].getName()<<endl;
+		i++;
+	}
+}
+void Magasin::printInfo(string nameProduct){
+	vector<Product*>::iterator it;
+	int i;
 
+	for(it = m_products.beginn(); it!=m_products.end();it++){
+		if(nameProduct == m_Products[i].getName()){
+			break;
+		}
+		i++;
+	}
+	cout<<"Nom du produit: "<<m_products[i].getName()<<", Description: "<<m_products[i].getDescription()<<", Quantité disponible: "<<m_products[i].getQuantity()<<", prix: "<<m_products[i].getPrice()<<endl;
+}
+void Magasin::UpdateQuantityProduct(string NameProduct, int quantity){
+	vector<Product*>::iterator it;
+        int i;
 
-
-
+        for(it = m_products.beginn(); it!=m_products.end();it++){
+                if(nameProduct == m_Products[i].getName()){
+                        break;
+                }
+                i++;
+        }
+        m_products[i].setQuantity = quantity;
+}
