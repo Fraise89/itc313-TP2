@@ -1,25 +1,32 @@
+#ifndef DEF_MAGASIN
+#define DEF_MAGASIN
+
 #include <string>
 #include <vector>
+#include "Produit.h"
+#include "Client.h"
+#include "Order.h"
+
 using namespace std;
-class Magasin
-{
+
+class Magasin{
 public:
-	Magasin(string products, string clients, string object);
-	string getProducts();
-	string getObject();
+	Magasin(vector<Product*> products, vector<Client*> clients, vector<Order*> orders);
 	vector<Product*> getProducts();
 	vector<Client*> getClients();
 	vector<Order*> getOrders();
-	Void setProducts(vector <Product*> product);
-	Void setClients(vector <Client*> client);
-	Void setOrders(vector <Order*> order);
-	Void setObject(string object);
+	void setProducts(vector<Product*> products);
+	void setClients(vector<Client*> clients);
+	void setOrders(vector<Order*> orders);
+	//question 3
+	void addProduct(Product* products);
+	void printAllProduct();
+	void pintInfo(string nameProduct);
+	void updateQuantityProduct(string nameProduct, int quantity);
+	private:
+		vector<Product*> m_products;
+		vector<Client*> m_clients;
+		vector<Order*> m_orders;
 
-private: 
-	string m_products;
-	string m_object;
-	vector<Product*> m_products;
-	vector<Client*> m_clients;
-	vector<Order*> m_orders;
-	
 };
+#endif
