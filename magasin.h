@@ -23,6 +23,15 @@ public:
 	void printAllProduct();
 	void pintInfo(string nameProduct);
 	void updateQuantityProduct(string nameProduct, int quantity);
+
+	//question 5
+	void addClient(Client* client);
+	void printAllClient();
+	void printClient(string nameClient);
+	void printClient(int idClient);
+	void addProductToPanier(string nameProduct, string nameClient);
+	void delProductOfPanier(string nameProduct, string nameClilent);
+	void setQuantityOfProductOfPanier(string nameProduct, string nameClient, int quantity);
 	private:
 		vector<Product*> m_products;
 		vector<Client*> m_clients;
