@@ -56,12 +56,18 @@ void Client::clearPanier(){
 
 //Question 4.d
 void Client::changeQuantity(vector<Product*> quantity){
-	n=m_panier.size();
+	n = m_panier.size();
+	
+	cout << "Changer la quantité du produit numéro :" << endl;
+	cin >> x;
 	for (int i = 0; i < n; ++i)
 	{
-		cout << "Nouvelle quantité:" << endl;
-		cin>>q>>endl;
-		q = quantity;
+		if (i==x)
+		{
+			cout << "Nouvelle quantité!" << endl;
+			cin>>q;
+			q = quantity; 
+		}
 	}
 }
 
